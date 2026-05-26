@@ -16,7 +16,8 @@ format=”%(asctime)s | %(levelname)s | %(message)s”,
 level=logging.INFO,
 handlers=[logging.FileHandler(“bot.log”, encoding=“utf-8”), logging.StreamHandler()]
 )
-log = logging.getLogger(**name**)
+log = logging.getLogger(__name__
+)
 
 try:
 from telegram import (Update, InlineKeyboardButton, InlineKeyboardMarkup,
@@ -417,5 +418,5 @@ app.add_handler(CallbackQueryHandler(on_callback))
 app.add_error_handler(on_error)
 app.run_polling(drop_pending_updates=True)
 
-if **name** == “**main**”:
-main()
+if __name__ == "__main__":
+    main()
