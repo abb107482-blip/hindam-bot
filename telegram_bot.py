@@ -1,4 +1,4 @@
-انسخ هذا الكود كاملاً:
+
 
 #!/usr/bin/env python3
 import os, io, re, json, logging, asyncio, tempfile
